@@ -11,14 +11,14 @@ NC='\033[0m' # No Color
 
 # Display welcome message using figlet and neofetch with color
 echo -e "${GREEN}"
-figlet "Welcome to Aigutech Application Deployment"
+figlet "Welcome to Tomcat Application Deployment"
 echo -e "${NC}"
 neofetch
 
 # Display automated installation message using figlet and color
 echo -e "${RED}"
 figlet -f slant "Automated Installation"
-echo -e "We will analyze your system and proceed with the application installation.${NC}"
+echo -e "Installation is examining your system and proceeding with the application installation.${NC}"
 
 # Install default JDK
 sudo apt install -y default-jdk
