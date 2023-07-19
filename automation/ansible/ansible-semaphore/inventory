@@ -1,0 +1,2 @@
+[prodec2]
+web1.bizongo.in ansible_connection=ssh ansible_user=rails 

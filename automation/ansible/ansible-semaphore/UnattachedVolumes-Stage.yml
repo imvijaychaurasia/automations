@@ -1,0 +1,53 @@
+---
+- name: Check unattached volumes in AWS EC2 and send email report
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    aws_access_key: "AKIATC6JYYMIRB3FXNMO"
+    aws_secret_key: "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"
+    aws_region: "ap-south-1"
+    email_from: "tech-billing@bizongo.com"
+    email_to: "tech-billing@bizongo.com"
+    email_subject: "Staging - Unattached Volumes Report"
+    email_body: |
+      <html>
+      <body>
+      <h2>Unattached Volumes Report</h2>
+      <table border="1">
+        <tr>
+          <th>Volume ID</th>
+          <th>Availability Zone</th>
+        </tr>
+        {% for volume in unattached_volumes %}
+        <tr>
+          <td>{{ volume.id }}</td>
+          <td>{{ volume.availability_zone }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      </body>
+      </html>
+
+  tasks:
+    - name: Get unattached volumes
+      community.aws.ec2_vol_facts:
+        aws_access_key: "{{ aws_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
+        region: "{{ aws_region }}"
+      register: ec2_volumes
+
+    - name: Filter unattached volumes
+      set_fact:
+        unattached_volumes: "{{ ec2_volumes.volumes | selectattr('state', 'equalto', 'available') | list }}"
+
+    - name: Generate email report
+      community.general.aws_ses:
+        aws_access_key: "{{ aws_access_key }}"
+        aws_secret_key: "{{ aws_secret_key }}"
+        region: "{{ aws_region }}"
+        from_email: "{{ email_from }}"
+        to_emails: "{{ email_to }}"
+        subject: "{{ email_subject }}"
+        body: "{{ email_body }}"
+      delegate_to: localhost

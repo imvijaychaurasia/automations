@@ -1,0 +1,14 @@
+---
+- name: Check Nginx status on Ubuntu
+  hosts: prodec2    
+  become: true
+#  vars:
+#    ansible_ssh_private_key_file: "~/.ssh/id_rsa.pub"
+  tasks:
+    - name: Check if Nginx is running
+      command: systemctl is-active nginx
+      register: nginx_status
+
+    - name: Display Nginx status
+      debug:
+        msg: "Nginx is {{ nginx_status.stdout }}"
