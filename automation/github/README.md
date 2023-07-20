@@ -6,8 +6,8 @@ The scripts provide functionality for archiving and unarchiving repositories, fe
 This repository contains the following scripts:
 - `archive_repos.sh`: Archives multiple repositories in the organization.
 - `unarchive_repos.sh`: Unarchives multiple repositories in the organization.
-- `bizongo_repo_list.sh`: Fetches a list of all repositories in the organization.
-- `bizongo_github_members.sh`: Fetches a list of organization members with their email addresses.
+- `org_repo_list.sh`: Fetches a list of all repositories in the organization.
+- `org_github_members.sh`: Fetches a list of organization members with their email addresses.
 - `unarchived_public_repos.sh`: Fetches a list of unarchived public repositories in the organization.
 - `remove_githubmember_withnoemail.sh`: Fetches list of members with email id private, removes them from the organization.
 Each script can be executed individually and provides specific functionality.
