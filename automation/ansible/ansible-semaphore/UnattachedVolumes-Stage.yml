@@ -4,11 +4,11 @@
   gather_facts: no
 
   vars:
-    aws_access_key: "AKIATC6JYYMIRB3FXNMO"
-    aws_secret_key: "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"
+    aws_access_key: "<id>"
+    aws_secret_key: "<key>"
     aws_region: "ap-south-1"
-    email_from: "tech-billing@bizongo.com"
-    email_to: "tech-billing@bizongo.com"
+    email_from: "<email>"
+    email_to: "<email>"
     email_subject: "Staging - Unattached Volumes Report"
     email_body: |
       <html>
