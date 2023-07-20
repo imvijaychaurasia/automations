@@ -3,7 +3,7 @@
 # Personal access token with repo scope
 ACCESS_TOKEN="<access_token>"
 # Organization name
-ORG_NAME="bizongo"
+ORG_NAME="<org>"
 # Slack webhook URL
 SLACK_WEBHOOK_URL="<slack_webhook_url>"
 
