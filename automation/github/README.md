@@ -1,4 +1,4 @@
-# Bizongo's Github Management Scripts
+# Github Management Scripts
 This repository contains scripts for managing repositories and members in a Bizongo GitHub.
 The scripts provide functionality for archiving and unarchiving repositories, fetching lists of repositories and organization members, and retrieving unarchived public repositories.
 
