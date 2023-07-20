@@ -3,7 +3,7 @@
 # Personal access token with repo scope
 ACCESS_TOKEN="<your-access-token>"
 # Organization name
-ORG_NAME="bizongo"
+ORG_NAME="<org>"
 # Path to the file containing the list of repository names
 REPO_LIST_FILE="repository_list.txt" #file which is only repo name, with each in one line
 # Slack webhook URL
