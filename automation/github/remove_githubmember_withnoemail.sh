@@ -3,7 +3,7 @@
 # Personal access token with read:org and delete:org scope
 ACCESS_TOKEN="<your-access-token>"
 # Organization name
-ORG_NAME="bizongo"
+ORG_NAME="<org>"
 # Slack webhook URL
 SLACK_WEBHOOK_URL="<slack-webhook-url>"
 
