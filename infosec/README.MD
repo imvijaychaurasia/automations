@@ -1,4 +1,4 @@
-# 🛡️ **InfoSec Armor**  
+# 🛡️ **InfoSec**  
 
 Welcome to the **InfoSec** repository! 🚀  
 This repository is a centralized hub for automation scripts and tools created for the InfoSec to support **Compliance** and **Security Monitoring** initiatives across our organization. 💻✨
