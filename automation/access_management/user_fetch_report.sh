@@ -7,13 +7,13 @@ if ! command -v aws &> /dev/null; then
 fi
 
 # Replace SLACK_WEBHOOK_URL with your Slack webhook URL
-SLACK_WEBHOOK_URL="https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL="https://hooks.slack.com/services/abc" #change slack webhook url
 
 # Run the Python script and capture the output
-output=$(python2 ./bizongo_org_github_users.py)
+output=$(python2 ./github_org_users.py)
 
 # Define the message and format the output as critical with emojis
-message=":rotating_light: *CRITICAL*: These are the members of Bizongo's GitHub Organization:\n\n$output"
+message=":rotating_light: *CRITICAL*: These are the members of Orgname GitHub Organization:\n\n$output"
 
 # Send the message and output to the Slack webhook
 curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$message\"}" "$SLACK_WEBHOOK_URL"
