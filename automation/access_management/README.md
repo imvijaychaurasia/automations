@@ -85,13 +85,5 @@ username2 Jane Smith jane@example.com
 
 Feel free to submit issues and enhancement requests!
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📞 Support
-
-For support, please contact your organization's GitHub administrators.
-
 ---
 ⭐️ Star this repository if you find it helpful!
