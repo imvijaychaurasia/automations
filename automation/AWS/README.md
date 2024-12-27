@@ -19,11 +19,3 @@ Please refer to the individual README.md files within each job folder for specif
 
 ## Independent Jobs
 All the jobs within this repository are designed to be independent in nature. This means you can use the scripts to run tasks in any environment without the need to set up Jenkins. Simply execute the scripts with the necessary parameters and configure any required AWS credentials or authentication.
-
-## Contributions
-Contributions to this repository are generally limited to the DevOps/InfraOps team. If you have suggestions or improvements for the scripts, please consult with the team and follow the established process for proposing and implementing changes.
-
-## Modification
-This repository is owned and managed by Org's DevOps/InfraOps team. For any questions or issues, please contact the DevOps/InfraOps team.
-
----
