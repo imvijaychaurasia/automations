@@ -1,0 +1,2 @@
+## GAM command to delete email accross google workspace org for a particular email message id
+gam all users delete messages query "rfc822msgid:Message ID" doit ##replace Message ID with the actual message it example 106-4585-4d91-9654-eae7cf18cd3d-000000@gmail.com
